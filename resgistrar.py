@@ -1,8 +1,17 @@
-
+import os
+def archivo ():
+    validar = os.path.exists('usuarios.txt')
+    if validar == True:
+        pass
+    else:
+        crear_archivo = open('usuarios.txt', 'x')
+        crear_archivo.close
+    
 class User():
     correo = ""
     clave = ""
-    estado = "activo"
+    estado = ""
+    sesion = ""
 u = User()
 #funcion para validar que la contraseña es valida
 def validar_clave(clave):
@@ -143,6 +152,7 @@ def iniciar_sesion(opcion, obj):
         
 #opciones del programa
 def opciones_del_programa(u):
+    archivo()
     while True:
         print('[1] registrar usuario.' )
         print('[2] iniciar sesion.' )
@@ -168,6 +178,9 @@ def opciones_del_programa(u):
             print('la opcion ingresada no es valida')
             continue
 
-opciones_del_programa(u)
 
-print(u.correo )
+def main ():
+    opciones_del_programa(u)
+
+if __name__ == '__main__':
+    main()

@@ -1,7 +1,13 @@
-def registrar(objeto):
-    archivo = open('usuarios.txt', 'a')
-    archivo.write(objeto.correo + ';' + objeto.clave + ';' + objeto.estado + ';' +'\n') 
-    archivo.close 
+import os
+def archivo ():
+    va = os.path.exists('usuarios.txt')
+    if va == True:
+        pass
+    else:
+        print('crear')
+        ar = open('usuarios.txt', 'x')
+        ar.close
+    
+    
 
-
-registrar()
+archivo()
