@@ -141,12 +141,6 @@ def iniciar_sesion(opcion, obj):
         else:
             continue
         
-
-
-
-
-
-
 #opciones del programa
 def opciones_del_programa(u):
     while True:
